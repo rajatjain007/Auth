@@ -8,6 +8,7 @@ dotenv.config();
 //Import Routes
 const authRoute = require('./routes/auth');
 const postRoute = require('./routes/posts');
+const uploadRoute = require('./routes/upload');
 
 
 
@@ -22,6 +23,7 @@ app.use(express.json());
 //Route Middlewares
 app.use('/api/user',authRoute);
 app.use('/api/post',postRoute);
+app.use('/api/upload',uploadRoute);
 
 
 app.listen(3000,()=> console.log("Server up and running"));
